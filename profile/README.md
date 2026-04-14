@@ -1,4 +1,4 @@
-# TomsProducts
+# NextLayer
 
 > **🚧 Coming Soon** — Products are under active development and rolling out shortly.
 
