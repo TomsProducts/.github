@@ -46,4 +46,4 @@ Every product is independently useful. Together they form a complete operational
 
 ---
 
-*Built with ♥ from Vlorë, Albania*
+*Built with ♥
