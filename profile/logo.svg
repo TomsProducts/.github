@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 130" width="440" height="130">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#c4b5fd"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Stacked layers icon -->
+  <rect x="10" y="82" width="90" height="13" rx="4" fill="url(#g3)"/>
+  <rect x="10" y="62" width="90" height="13" rx="4" fill="url(#g2)"/>
+  <rect x="10" y="42" width="90" height="13" rx="4" fill="url(#g1)"/>
+
+  <!-- N connector lines -->
+  <line x1="29" y1="42" x2="29" y2="95" stroke="#6366f1" stroke-width="4" stroke-linecap="round"/>
+  <line x1="29" y1="42" x2="77" y2="95" stroke="#a78bfa" stroke-width="3" stroke-linecap="round"/>
+  <line x1="77" y1="42" x2="77" y2="95" stroke="#6366f1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Wordmark: Next -->
+  <text x="120" y="72"
+        font-family="'Segoe UI', -apple-system, Helvetica, Arial, sans-serif"
+        font-size="40" font-weight="700" letter-spacing="-1"
+        fill="url(#g1)">Next</text>
+
+  <!-- Wordmark: Layer -->
+  <text x="120" y="105"
+        font-family="'Segoe UI', -apple-system, Helvetica, Arial, sans-serif"
+        font-size="36" font-weight="300" letter-spacing="4"
+        fill="url(#g2)">Layer</text>
+
+  <!-- Tagline -->
+  <text x="122" y="121"
+        font-family="'Segoe UI', -apple-system, Helvetica, Arial, sans-serif"
+        font-size="9.5" letter-spacing="3.5" fill="#6366f1"
+        opacity="0.85">AI INFRASTRUCTURE PLATFORM</text>
+</svg>

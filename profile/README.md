@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/TomsProducts/WebSite/main/logo.svg" alt="NextLayer" width="380" />
+<img src="./logo.svg" alt="NextLayer" width="380" />
 
 <br/><br/>
 
