@@ -1,49 +1,139 @@
+<div align="center">
+
 # NextLayer
 
-> **🚧 Coming Soon** — Products are under active development and rolling out shortly.
+### AI Infrastructure Platform
+
+**10 tightly integrated products that give AI agents everything they need to operate in production.**
+Self-hosted · Open-source · Built for the way AI systems actually work.
+
+[![Docs](https://img.shields.io/badge/docs-NextLayerDocumentation-blue?style=flat-square)](https://github.com/TomsProducts/NextLayerDocumentation)
+[![Integrations](https://img.shields.io/badge/integrations-MCP%20%7C%20Claude%20%7C%20Copilot-purple?style=flat-square)](https://github.com/TomsProducts/Integrations)
+[![Bootstrap](https://img.shields.io/badge/quickstart-bootstrap.sh-green?style=flat-square)](https://github.com/TomsProducts/Integrations/blob/main/bootstrap.sh)
+
+</div>
 
 ---
 
-## Nexlayer — AI Infrastructure Platform
+## Platform Overview
 
-Eight tightly integrated products that give AI agents everything they need to operate in production. Self-hosted. Open-source. Built from the ground up for the way AI systems actually work.
-
----
-
-### The Products
-
-| | Product | What it does |
-|--|---------|-------------|
-| 🔐 | **[AgentVault](https://github.com/TomsProducts/AgentVault)** | Zero-trust secret store for AI agents. AES-256-GCM encryption, short-lived vault tokens, per-agent policy scoping. Every agent gets only the secrets it needs. |
-| 🔀 | **[FlowMesh](https://github.com/TomsProducts/FlowMesh)** | Visual AI pipeline builder. Wire agents together with drag-and-drop, set cron/webhook triggers, get full step-by-step execution traces. |
-| 👁️ | **[WatchGrid](https://github.com/TomsProducts/WatchGrid)** | AI observability platform. Every LLM call, tool use, and error captured in real time. Per-run cost tracking, alert rules, Prometheus metrics. |
-| 🌐 | **[ModelRouter](https://github.com/TomsProducts/ModelRouter)** | Unified LLM gateway. Drop-in Anthropic-compatible API that routes to Claude, Gemini, or Ollama. Switch providers platform-wide with one config change. |
-| 🛒 | **[AgentShop](https://github.com/TomsProducts/AgentShop)** | AI coding agent dispatch. Kanban board for specialized coding agents (Python, Java, DevOps, Frontend…) running on your own machines via Claude Code CLI. |
-| 🧠 | **[BrainVault](https://github.com/TomsProducts/BrainVault)** | Personal AI knowledge base. Write notes, ask questions — get answers cited from your own content, not hallucinated. RAG over your entire history. |
-| 📊 | **[PeriodAI](https://github.com/TomsProducts/PeriodAIProduct)** | Business reporting automation. Define a template, connect a data source, set a schedule — AI generates and delivers the narrative report automatically. |
-| 📚 | **[WikiLLM](https://github.com/TomsProducts/WikiLLMAgentAndUI)** | Document-to-wiki engine. Drop files into a folder, get a structured cross-linked wiki out. Stays in sync as files change. |
+NextLayer is a complete operational layer for AI agents — from secret management and LLM routing to memory, observability, and automated pipelines. Every product is independently useful. Together they form a unified, self-hosted AI infrastructure stack.
 
 ---
 
-### How They Connect
+## Products
+
+### 🔐 Identity & Security
+
+| Product | Description |
+|---------|-------------|
+| **[AI Identity Server](https://github.com/TomsProducts/AIIdenityServer)** | Central SSO and authentication for all NextLayer products. JWT-based, supports all services via a unified login. |
+| **[AgentVault](https://github.com/TomsProducts/AgentVault)** | Zero-trust secret store for AI agents. AES-256-GCM encryption, short-lived vault tokens, per-agent policy scoping. Every agent gets only the secrets it needs — nothing more. |
+
+### 🤖 Agent Intelligence
+
+| Product | Description |
+|---------|-------------|
+| **[AgentBrain](https://github.com/TomsProducts/AgentBrain)** | Persistent memory system for AI agents. Three-layer architecture: working memory (24h), episodic memory (90d), and long-term lessons extracted by a nightly dream cycle. |
+| **[BrainVault](https://github.com/TomsProducts/BrainVault)** | Personal AI knowledge base. Write notes, ask questions — get answers cited from your own content. RAG over your entire note history, not hallucinated responses. |
+
+### ⚙️ Orchestration & Routing
+
+| Product | Description |
+|---------|-------------|
+| **[FlowMesh](https://github.com/TomsProducts/FlowMesh)** | Visual AI pipeline builder. Wire agents together with drag-and-drop, set cron and webhook triggers, get full step-by-step execution traces. |
+| **[ModelRouter](https://github.com/TomsProducts/ModelRouter)** | Unified LLM gateway. Drop-in Anthropic-compatible API that routes to Claude, Gemini, or Ollama. Switch providers platform-wide with a single config change. |
+| **[AgentShop](https://github.com/TomsProducts/AgentShop)** | AI coding agent dispatch. Kanban board for specialized agents (Python, Java, DevOps, React…) running on your own machines via Claude Code CLI. |
+
+### 📊 Observability & Knowledge
+
+| Product | Description |
+|---------|-------------|
+| **[WatchGrid](https://github.com/TomsProducts/WatchGrid)** | AI observability platform. Every LLM call, tool use, and error captured in real time. Per-run cost tracking, alert rules, and Prometheus metrics export. |
+| **[PeriodAI](https://github.com/TomsProducts/PeriodAIProduct)** | Business reporting automation. Define a template, connect a data source, set a schedule — AI generates and delivers the narrative report automatically. |
+| **[WikiLLM](https://github.com/TomsProducts/WikiLLMAgentAndUI)** | Document-to-wiki engine. Drop files into a folder, get a structured, cross-linked wiki out. Stays in sync as files change. |
+
+---
+
+## How It All Connects
 
 ```
-AgentVault  ←  all products read secrets from here
-ModelRouter  ←  all LLM calls route through here
-WatchGrid   ←  all products log events here
-FlowMesh    →  orchestrates AgentShop, PeriodAI, WikiLLM, BrainVault
+┌─────────────────────────────────────────────────────────────┐
+│                     AI Identity Server                       │
+│              (SSO · JWT · all products auth here)            │
+└──────────────────────────┬──────────────────────────────────┘
+                           │
+          ┌────────────────┼────────────────┐
+          ▼                ▼                ▼
+     AgentVault       ModelRouter       WatchGrid
+    (secrets for     (all LLM calls    (all events
+     all agents)      route here)       logged here)
+          │                │                │
+          └────────────────┼────────────────┘
+                           │
+          ┌────────────────┼────────────────┐
+          ▼                ▼                ▼
+      FlowMesh         AgentBrain        BrainVault
+    (pipelines)        (memory)          (notes/RAG)
+          │
+    ┌─────┴──────┐
+    ▼            ▼
+AgentShop    PeriodAI / WikiLLM
+(coding       (reporting +
+ agents)       knowledge)
 ```
 
-Every product is independently useful. Together they form a complete operational layer for AI agents.
+---
+
+## Quick Start
+
+Clone the entire platform workspace on any machine in one command:
+
+```bash
+git clone https://github.com/TomsProducts/Integrations.git integrations
+bash integrations/bootstrap.sh ~/nextlayer
+```
+
+This bootstraps the full workspace:
+```
+~/nextlayer/
+├── products/        # 10 independent product repos
+├── integrations/    # MCP server, Claude + Copilot integration
+├── infrastructure/  # Docker Compose files for every product
+├── docs/            # Platform documentation
+├── website/         # Product pages
+└── memory/          # Agent lessons and knowledge exports
+```
 
 ---
 
-### Docs & Resources
+## Integrations
 
-- 📖 [Full Documentation](https://github.com/TomsProducts/NextLayerDocumentation)
-- 🌐 [Platform Website](http://192.168.68.111)
-- 🗺️ [Ecosystem Map](http://192.168.68.111/interactions.html)
+NextLayer ships with first-class support for AI coding assistants:
+
+- **Claude Code** — full `CLAUDE.md` agent instructions across all products
+- **GitHub Copilot CLI** — MCP server exposes all 9 products as native tools
+- **MCP Protocol** — `nexlayer_mcp.py` gives any MCP-compatible client access to AgentBrain, BrainVault, AgentVault, WatchGrid, FlowMesh, ModelRouter, AgentShop, PeriodAI, and WikiLLM
+
+See [`TomsProducts/Integrations`](https://github.com/TomsProducts/Integrations) for setup guides.
 
 ---
 
-*Built with ♥
+## Resources
+
+| | Link |
+|--|------|
+| 📖 | [Platform Documentation](https://github.com/TomsProducts/NextLayerDocumentation) |
+| 🚀 | [Bootstrap Script](https://github.com/TomsProducts/Integrations/blob/main/bootstrap.sh) |
+| 🧩 | [MCP Server](https://github.com/TomsProducts/Integrations/blob/main/mcp-server/nexlayer_mcp.py) |
+| 🏗️ | [Infrastructure / Docker Compose](https://github.com/TomsProducts/infastructure) |
+| 🧠 | [Agent Memory Store](https://github.com/TomsProducts/AIMemory-AgentsMemory) |
+| 🌐 | [Product Website](https://github.com/TomsProducts/WebSite) |
+
+---
+
+<div align="center">
+
+*Built with ♥ by the NextLayer team*
+
+</div>
