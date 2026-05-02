@@ -1,15 +1,15 @@
 <div align="center">
 
-<img src="./logo.svg" alt="NextLayer" width="380" />
+<img src="./logo.svg" alt="Janorix" width="380" />
 
 <br/><br/>
 
-### AI Infrastructure Platform
+### The Gateway Layer for AI Agents
 
 **10 tightly integrated products that give AI agents everything they need to operate in production.**
-Self-hosted · Open-source · Built for the way AI systems actually work.
+Self-hosted · Open-source · Named for Janus, the Roman god of gateways and beginnings.
 
-[![Docs](https://img.shields.io/badge/docs-NextLayerDocumentation-blue?style=flat-square)](https://github.com/TomsProducts/NextLayerDocumentation)
+[![Docs](https://img.shields.io/badge/docs-Documentation-blue?style=flat-square)](https://github.com/TomsProducts/NextLayerDocumentation)
 [![Integrations](https://img.shields.io/badge/integrations-MCP%20%7C%20Claude%20%7C%20Copilot-purple?style=flat-square)](https://github.com/TomsProducts/Integrations)
 [![Bootstrap](https://img.shields.io/badge/quickstart-bootstrap.sh-green?style=flat-square)](https://github.com/TomsProducts/Integrations/blob/main/bootstrap.sh)
 
@@ -19,7 +19,7 @@ Self-hosted · Open-source · Built for the way AI systems actually work.
 
 ## Platform Overview
 
-NextLayer is a complete operational layer for AI agents — from secret management and LLM routing to memory, observability, and automated pipelines. Every product is independently useful. Together they form a unified, self-hosted AI infrastructure stack.
+Janorix is a complete operational layer for AI agents — named for **Janus**, the Roman god of gateways, beginnings, and transitions. Like its namesake, Janorix stands at the threshold between human intent and AI execution, routing every request, securing every secret, and remembering every lesson.
 
 ---
 
@@ -29,7 +29,7 @@ NextLayer is a complete operational layer for AI agents — from secret manageme
 
 | Product | Description |
 |---------|-------------|
-| **[AI Identity Server](https://github.com/TomsProducts/AIIdenityServer)** | Central SSO and authentication for all NextLayer products. JWT-based, supports all services via a unified login. |
+| **[AI Identity Server](https://github.com/TomsProducts/AIIdenityServer)** | Central SSO and authentication for all Janorix products. JWT-based, supports all services via a unified login. |
 | **[AgentVault](https://github.com/TomsProducts/AgentVault)** | Zero-trust secret store for AI agents. AES-256-GCM encryption, short-lived vault tokens, per-agent policy scoping. Every agent gets only the secrets it needs — nothing more. |
 
 ### 🤖 Agent Intelligence
@@ -93,12 +93,12 @@ Clone the entire platform workspace on any machine in one command:
 
 ```bash
 git clone https://github.com/TomsProducts/Integrations.git integrations
-bash integrations/bootstrap.sh ~/nextlayer
+bash integrations/bootstrap.sh ~/janorix
 ```
 
 This bootstraps the full workspace:
 ```
-~/nextlayer/
+~/janorix/
 ├── products/        # 10 independent product repos
 ├── integrations/    # MCP server, Claude + Copilot integration
 ├── infrastructure/  # Docker Compose files for every product
@@ -111,11 +111,11 @@ This bootstraps the full workspace:
 
 ## Integrations
 
-NextLayer ships with first-class support for AI coding assistants:
+Janorix ships with first-class support for AI coding assistants:
 
 - **Claude Code** — full `CLAUDE.md` agent instructions across all products
 - **GitHub Copilot CLI** — MCP server exposes all 9 products as native tools
-- **MCP Protocol** — `nexlayer_mcp.py` gives any MCP-compatible client access to AgentBrain, BrainVault, AgentVault, WatchGrid, FlowMesh, ModelRouter, AgentShop, PeriodAI, and WikiLLM
+- **MCP Protocol** — `janorix_mcp.py` gives any MCP-compatible client access to AgentBrain, BrainVault, AgentVault, WatchGrid, FlowMesh, ModelRouter, AgentShop, PeriodAI, and WikiLLM
 
 See [`TomsProducts/Integrations`](https://github.com/TomsProducts/Integrations) for setup guides.
 
@@ -125,9 +125,9 @@ See [`TomsProducts/Integrations`](https://github.com/TomsProducts/Integrations) 
 
 | | Link |
 |--|------|
-| 📖 | [Platform Documentation](https://github.com/TomsProducts/NextLayerDocumentation) |
+| 📖 | [Platform Documentation](https://github.com/TomsProducts/JanorixDocumentation) |
 | 🚀 | [Bootstrap Script](https://github.com/TomsProducts/Integrations/blob/main/bootstrap.sh) |
-| 🧩 | [MCP Server](https://github.com/TomsProducts/Integrations/blob/main/mcp-server/nexlayer_mcp.py) |
+| 🧩 | [MCP Server](https://github.com/TomsProducts/Integrations/blob/main/mcp-server/janorix_mcp.py) |
 | 🏗️ | [Infrastructure / Docker Compose](https://github.com/TomsProducts/infastructure) |
 | 🧠 | [Agent Memory Store](https://github.com/TomsProducts/AIMemory-AgentsMemory) |
 | 🌐 | [Product Website](https://github.com/TomsProducts/WebSite) |
@@ -136,6 +136,6 @@ See [`TomsProducts/Integrations`](https://github.com/TomsProducts/Integrations) 
 
 <div align="center">
 
-*Built with ♥ by the NextLayer team*
+*Built with ♥ by the Janorix team*
 
 </div>
