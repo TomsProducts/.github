@@ -1,6 +1,8 @@
 <div align="center">
 
-# NextLayer
+<img src="https://raw.githubusercontent.com/TomsProducts/WebSite/main/logo.svg" alt="NextLayer" width="380" />
+
+<br/><br/>
 
 ### AI Infrastructure Platform
 
